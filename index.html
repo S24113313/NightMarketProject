@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Gun Game</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: 'Arial', sans-serif; }
+        
+        #instructions {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            pointer-events: none;
+        }
+
+        /* --- THE NEW WATER UI --- */
+        #water-ui {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        #bar-container {
+            width: 300px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 3px solid #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #fill {
+            width: 100%; /* You can animate this width later with JS */
+            height: 100%;
+            background: linear-gradient(to bottom, #00f2ff, #0077ff);
+            color: white;
+            font-weight: bold;
+            line-height: 40px; /* Centers text vertically */
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="instructions">Click and Hold to Shoot!</div>
+
+    <div id="water-ui">
+        <div id="bar-container">
+            <div id="fill">WATER</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
